@@ -13,6 +13,8 @@ Upon opening the terminal, Zsh displayed the following error:
 zsh: corrupt history file /home/kali/.zsh_history
 ```
 
+![Original Zsh Error](<Zsh corruption fix/original-zsh-error.png>)
+
 This indicated that the shell's command history file had become corrupted, potentially due to an interrupted write operation or improper shutdown.
 
 ## Troubleshooting & Resolution
@@ -44,6 +46,7 @@ Restarted the Zsh shell to load the repaired history file.
 ```bash
 exec zsh
 ```
+![Zsh Command Fix](<Zsh corruption fix/zhs-cmd-fix.png>)
 
 ### 5. Verified Recovery
 Executed the following command to verify that command history was accessible again.
@@ -51,7 +54,7 @@ Executed the following command to verify that command history was accessible aga
 ```bash
 history
 ```
-
+![History Fixed](<Zsh corruption fix/history-fixed.png>)
 ## Outcome
 Successfully recovered readable command history and restored normal Zsh history functionality.
 
