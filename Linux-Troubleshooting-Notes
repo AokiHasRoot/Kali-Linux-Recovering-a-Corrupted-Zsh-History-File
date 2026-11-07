@@ -1,0 +1,14 @@
+{zsh: corrupt history file /home/kali/.zsh_history} 
+
+I figured out that shutting down a vm from the virtual box menu instead of inside the vm itself can cause zsh_history to corrupt. These are the cmds i used to fix it.
+
+Step 1.  back up the corrupted file. {cp ~/.zsh_history ~/.zsh_history.backup}
+
+Step 2. Repair the history file {strings ~/.zsh_history.backup > ~/.zsh_history}
+
+Step 3. Fix permissions {chmod 600 ~/.zsh_history}
+
+Step 4. Reload Zhs {exec zsh}
+
+Step 5. Verify fix worked {history} you should see previous commands.
+
